@@ -7,7 +7,7 @@
 }
 
 body {
-    background: rgb(201, 201, 201);
+    background: rgb(31, 30, 30);
     font-family: "Oxanium";
     font-size: 16px;
 }
@@ -31,19 +31,58 @@ body {
 .date p {
     display: inline-block;
     line-height: 1 em;
+    color: white;
 }
 
 .clock {
     text-align: center;
     font-size: 500%;
+    margin: auto;
     margin-bottom: 5%;
     padding: 20px;
-    width: 100%;
+    width: 70%;
+    background: rgb(17, 17, 17);
+    border-radius: 10px;
 }
 
 .clock p {
     display: inline-block;
     line-height: 1 em;
     background: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    /*text-decoration: line-through;*/
 }
 
+.clock .split {
+    background: none;
+}
+
+.clock .sec{
+    display: inline-block;
+    line-height: 1 em;
+    background: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    /*text-decoration: line-through;*/
+    position: relative;
+}
+
+.clock .sec .seconds2 {
+    overflow: hidden;
+	z-index: 1000;
+    position: absolute;
+    top: -62px;
+    height: 0px;
+}
+
+.clock .sec .seconds {
+    overflow: hidden;
+    z-index: 1000;
+    position: absolute;
+    top: -62px;
+}
