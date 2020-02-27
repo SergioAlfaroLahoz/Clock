@@ -7,10 +7,14 @@
 }
 
 body {
-    background: rgb(31, 30, 30);
+    background: url(../img/Background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
     font-family: "Oxanium";
     font-size: 16px;
 }
+
+/* DATE */
 
 .wrap {
     width: 90%;
@@ -20,10 +24,11 @@ body {
 
 .date {
     text-align: center;
+    border-radius: 10px;
     font-size: 300%;
     margin-top: 5%;
     margin-bottom: 5%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.74);
     padding: 20px;
     width: 100%;
 }
@@ -31,58 +36,142 @@ body {
 .date p {
     display: inline-block;
     line-height: 1 em;
-    color: white;
+    color: black;
+    font-weight: bold;
 }
 
+/* CLOCK */
+
 .clock {
+    background: rgba(255, 255, 255, 0.74);
     text-align: center;
     font-size: 500%;
     margin: auto;
-    margin-bottom: 5%;
     padding: 20px;
-    width: 70%;
-    background: rgb(17, 17, 17);
+    width: 60%;
     border-radius: 10px;
 }
 
 .clock p {
     display: inline-block;
     line-height: 1 em;
-    background: rgba(0, 0, 0, 0.5);
+    background: none;
+    font-weight: bold;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.clock .s {
+    display: inline-block;
+    background: none;
+    line-height: 1 em;
+    font-weight: bold;
+    border-radius: 10px;
+    color: black;
+    padding: 10px;
+    position: relative;
+    margin: 10px 50px;
+    margin-bottom: 100px;
+}
+
+.clock .s .split {
+    background: none;
+    overflow: hidden;
+	z-index: 1000;
+    position: absolute;
+    color: black;
+}
+
+/* HOURS */
+
+.clock .h {
+    display: inline-block;
+    line-height: 1 em;
     font-weight: bold;
     border-radius: 10px;
     color: white;
     padding: 10px;
-    /*text-decoration: line-through;*/
+    position: relative;
+    margin: 10px 30px;
+    margin-left: -75px;
+    margin-bottom: 100px;
 }
 
-.clock .split {
-    background: none;
+.clock .h .hour {
+    background: url(../img/FlipClock.png);
+    background-size: 115px;
+    overflow: hidden;
+	z-index: 1000;
+    position: absolute;
 }
+
+.clock .h .hour2 {
+    background: url(../img/FlipClock.png);
+    background-size: 115px;
+    overflow: hidden;
+    z-index: 1000;
+    position: absolute;
+}
+
+/* MINUTES */
+
+.clock .m {
+    display: inline-block;
+    line-height: 1 em;
+    font-weight: bold;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    position: relative;
+    margin: 10px 30px;
+    margin-left: -40px;
+    margin-bottom: 100px;
+}
+
+.clock .m .minutes {
+    background: url(../img/FlipClock.png);
+    background-size: 115px;
+    overflow: hidden;
+	z-index: 1000;
+    position: absolute;
+}
+
+.clock .m .minutes2 {
+    background: url(../img/FlipClock.png);
+    background-size: 115px;
+    z-index: 1000;
+    position: absolute;
+}
+
+/* SECONDS */
 
 .clock .sec{
     display: inline-block;
     line-height: 1 em;
-    background: rgba(0, 0, 0, 0.5);
     font-weight: bold;
     border-radius: 10px;
     color: white;
     padding: 10px;
-    /*text-decoration: line-through;*/
     position: relative;
-}
-
-.clock .sec .seconds2 {
-    overflow: hidden;
-	z-index: 1000;
-    position: absolute;
-    top: -62px;
-    height: 0px;
+    margin: 10px 30px;
+    margin-left: -40px;
+    margin-bottom: 100px;
 }
 
 .clock .sec .seconds {
+    background: url(../img/FlipClock.png);
+    background-size: 115px;
+    overflow: hidden;
+	z-index: 1000;
+    position: absolute;
+    height: 0px;
+}
+
+.clock .sec .seconds2 {
+    background: url(../img/FlipClock.png);
+    background-size: 115px;
     overflow: hidden;
     z-index: 1000;
     position: absolute;
-    top: -62px;
 }

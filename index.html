@@ -13,18 +13,32 @@
         <div class="wrap">
             <div class="date">
                 <p id="dayName" class="dayName"></p>
-                <p id="day" class="day"></p>
-                <p>of </p>
+                <p>,</p>
                 <p id="month" class="month"></p>
-                <p>of</p>
+                <p id="day" class="day"></p>
+                <p>,</p>
                 <p id="year" class="year"></p>
             </div>
 
             <div class="clock">
-                <p id="hour" class="hour"></p>
-                <p class="split">:</p>
-                <p id="minutes" class="minutes"></p>
-                <p class="split">:</p>
+                <div id="h" class="h">
+                    <p id="hour" class="hour"></p>
+                    <p id="hour2" class="hour"></p>
+                </div>
+                
+                <div class="s">
+                    <p class="split">:</p>
+                </div>
+
+                <div id="m" class="m">
+                    <p id="minutes" class="minutes"></p>
+                    <p id="minutes2" class="minutes"></p>
+                </div>
+                
+                <div class="s">
+                    <p class="split">:</p>
+                </div>
+
                 <div id="sec" class="sec">
                     <p id="seconds" class="seconds"></p>
                     <p id="seconds2" class="seconds2"></p>

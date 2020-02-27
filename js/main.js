@@ -1,6 +1,8 @@
 (function(){
 
-    var flag = true;
+    var flagS = true;
+    var flagM = true;
+    var flagH = true;
 
     var actualizeHour = function(){
         var date = new Date();
@@ -17,7 +19,9 @@
         if(seconds<10){ seconds = "0" + seconds };
 
         var pHour = document.getElementById("hour");
+        var pHour2 = document.getElementById("hour2");
         var pMinutes = document.getElementById("minutes");
+        var pMinutes2 = document.getElementById("minutes2");
         var pSeconds = document.getElementById("seconds");
         var pSeconds2 = document.getElementById("seconds2");
         var pDayName = document.getElementById("dayName");
@@ -35,27 +39,60 @@
 
         pYear.textContent = year;
 
-        pHour.textContent = hour;
-        pMinutes.textContent = minutes;
+        if(pHour.textContent!=hour){
+            pHour.textContent = hour;
+            pHour2.textContent = hour;
+
+            if(flagH){
+                pHour2.style.height = "120px"
+                pHour2.style.transition = "500ms all ease";
+                pHour.style.height = "0px"
+                pHour.style.transition = "10ms all ease";
+                flagH = false;
+            }else{
+                pHour.style.height = "120px"
+                pHour.style.transition = "500ms all ease";
+                pHour2.style.height = "0px"
+                pHour2.style.transition = "10ms all ease";
+                flagH = true;
+            }
+        }
+
+        if(pMinutes.textContent!=minutes){
+            pMinutes.textContent = minutes;
+            pMinutes2.textContent = minutes;
+
+            if(flagM){
+                pMinutes2.style.height = "120px"
+                pMinutes2.style.transition = "500ms all ease";
+                pMinutes.style.height = "0px"
+                pMinutes.style.transition = "10ms all ease";
+                flagM = false;
+            }else{
+                pMinutes.style.height = "120px"
+                pMinutes.style.transition = "500ms all ease";
+                pMinutes2.style.height = "0px"
+                pMinutes2.style.transition = "10ms all ease";
+                flagM = true;
+            }
+        }
+
+
         pSeconds.textContent = seconds;
         pSeconds2.textContent = seconds;
 
-        if(flag){
-            pSeconds2.style.height = "115px"
-            //pSeconds2.style.padding = "10px"
+        if(flagS){
+            pSeconds2.style.height = "120px"
             pSeconds2.style.transition = "500ms all ease";
             pSeconds.style.height = "0px"
-            //pSeconds.style.padding = "0px"
             pSeconds.style.transition = "10ms all ease";
-            flag = false;
+            flagS = false;
         }else{
-            pSeconds2.style.height = "0px"
-            //pSeconds2.style.padding = "0px"
-            pSeconds2.style.transition = "10ms all ease";
-            pSeconds.style.height = "115px"
-            //pSeconds.style.padding = "10px"
+            pSeconds.style.height = "120px"
             pSeconds.style.transition = "500ms all ease";
-            flag = true;
+            pSeconds2.style.height = "0px"
+            pSeconds2.style.transition = "10ms all ease";
+            flagS = true;
         }
 
     };
